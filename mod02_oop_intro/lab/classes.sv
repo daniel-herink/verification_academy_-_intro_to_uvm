@@ -20,6 +20,22 @@ typedef enum {ld, inc, op} op_t;
 // Please define a class called small_data_t extends ctr_op_t and 
 // which constrains the data_t variable to be less than 8'd101
 
+class ctr_op_t;
+   rand data_t ctr_data;
+   rand op_t ctr_op;
+
+   function string convert2string();
+      return $sformatf(s, "data %2h   op: %3s", ctr_data, ctr_op);
+   endfunction
+endclass
+
+class ld_op_t extends ctr_op_t;
+   constraint op_load {ctr_op == ld;}
+endclass
+
+class small_data_t extends ctr_op_t;
+   constraint data_size {ctr_data < 101;}
+endclass
 
 module top;
    ctr_op_t ctr_op;
