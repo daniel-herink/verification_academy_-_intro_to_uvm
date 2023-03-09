@@ -53,7 +53,7 @@ module top;
       
       $display("*** inc only ***");
       repeat(5) begin : inc_only
-         assert(ctr_op.randomize() 
+         assert(ctr_op.randomize() with {ctr_op == inc;}
                 // Please add a constraint using a "with" statement 
                 // that limts the op_t data member to be "inc" only
                 );
