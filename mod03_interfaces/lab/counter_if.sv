@@ -19,7 +19,19 @@ interface counter_if ;
 
   // Please create an initial block with a forever loop to generate the clock
 
+  initial begin
+    clk = 0;
+    forever
+      #1 clk = ~clk;
+  end
+
   // Please create an initial block that holds the reset low for two clock cycles
+
+  initial begin
+    rst = 0;
+    repeat (2) @(posedge clk);
+    rst = 1;
+  end
 
   always @(posedge clk) begin: beh_cntr
     if (!rst)
@@ -32,5 +44,7 @@ interface counter_if ;
   end
 
   // Please create an always block that runs on the negative edge of the clock and asserts that q = q_beh
-
+  
+  always @(negedge clk)
+    assert (q == q_beh);
 endinterface : counter_if
