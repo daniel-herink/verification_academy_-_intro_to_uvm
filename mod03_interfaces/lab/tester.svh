@@ -17,6 +17,3 @@ class tester;
       $finish;
    endtask // run
 endclass // tester
-
-
-   

@@ -1,4 +1,4 @@
-interface counter_if ;
+interface counter_if;
 
   // Please declare the following signals:
   // data_in is an 8-bit logic value
