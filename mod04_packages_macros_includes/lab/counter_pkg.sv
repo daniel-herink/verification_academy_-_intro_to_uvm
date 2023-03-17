@@ -1,7 +1,5 @@
 package counter_pkg;
-   // Please include tester.svh
-   // Please include ctr_checker.svh
-   // Please include monitor.svh
-  
+`include "tester.svh"
+`include "ctr_checker.svh"
+// `include "monitor.svh"
 endpackage // counter_pkg
-
