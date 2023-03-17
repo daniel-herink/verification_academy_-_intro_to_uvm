@@ -11,10 +11,10 @@ module top;
    initial begin
 
       // 1. Please set the global interface variable equal to ctr_if;
-
+      counter_pkg::virt_interf = crt_if;
       
       // 2. Please call run_test()
-      
+      run_test();
       
    end   
       
