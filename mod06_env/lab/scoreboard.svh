@@ -1,7 +1,7 @@
 // Please define a class called "scoreboard" that extends agent_with_interface and register it with the factory
-
+class scoreboard extends agent_with_interface;
    
-
+  `uvm_component_utils(scoreboard)
 
    logic [7:0] beh_q;
 

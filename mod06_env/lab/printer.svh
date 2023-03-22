@@ -1,9 +1,9 @@
 // Please declare a class called printer that extends agent_with_interface
-
+class printer extends agent_with_interface;
 
    // Please use the uvm_component_utils macro to tell the UVM about the 
    // printer class
-
+   `uvm_component_utils(printer)
 
    function new(string name="", uvm_component parent);
       super.new(name, parent);

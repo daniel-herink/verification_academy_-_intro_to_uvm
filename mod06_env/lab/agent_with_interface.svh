@@ -2,13 +2,13 @@
 // objects that wish to have access to the DUT.
 
 // Please define a class called agent_with_interface that extends uvm_agent
-
+class agent_with_interface extends uvm_agent;
 
 
    // Please declare a variable called 'i' that will hold a
    // counter_if interface.  This is a "virtual interface" so be sure
    // to use the "virtual" keyword
-   
+   virtual interface counter_if i;
 
 
    function new(string name="", uvm_component parent);
@@ -20,7 +20,7 @@
    function void build_phase(uvm_phase phase);
       super.build_phase(phase);
       // Please copy the global counter interface into i
-
+      i = counter_pkg::global_ctr_if;
    endfunction : build_phase
    
 endclass

@@ -11,7 +11,7 @@ module top;
 
       // Please copy ctr_if to the global virtual interface variable 
       // you created in counter_pkg.sv.
-
+      global_ctr_if = ctr_if;
 
 
       run_test();
